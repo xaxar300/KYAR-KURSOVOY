@@ -1,0 +1,333 @@
+.hero-section {
+  padding: 4rem 0; 
+  background-color: #fff; 
+}
+
+.container {
+  max-width: 1400px; 
+  margin: 0 auto; 
+  padding: 0 2rem;
+}
+
+.hero-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  gap: 2rem; 
+}
+
+.hero-text-column {
+  flex: 0 0 48%; 
+  max-width: 580px; 
+}
+
+.hero-image-column {
+  flex: 0 0 48%; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  max-width: 580px; 
+}
+
+.hero-title {
+  font-family: 'Geist Mono', monospace;
+  font-size: 48px; 
+  font-weight: 700; 
+  line-height: 1.3;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title-accent {
+  font-weight: 900; 
+}
+
+.hero-description {
+  font-family: 'Geist Mono', monospace;
+  font-size: 18px; 
+  font-weight: 500;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hero-marketplace-name {
+  font-weight: 300;
+}
+
+.hero-stats {
+  font-family: 'Geist Mono', monospace;
+  font-size: 18px; 
+  text-align: left;
+  color: #333;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.hero-stats-intro,
+.hero-stats-outro {
+  font-weight: 500;
+}
+
+.hero-stats-number {
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  font-family: 'Geist Mono', monospace;
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 2px solid #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.btn-primary {
+  background-color: #64fcd9;
+  color: #000;
+  border-color: #000;
+}
+
+.btn-primary:hover {
+  background-color: #50e8c0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #333;
+  border-color: #333;
+}
+
+.btn-secondary:hover {
+  background-color: #f0f0f0;
+  color: #000;
+  border-color: #000;
+}
+
+.hero-image-caption {
+  font-family: 'Geist Mono', monospace;
+  font-size: 22px; 
+  font-weight: 300;
+  color: #333;
+  text-align: right;
+  width: 100%; 
+  margin-bottom: 1rem;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 430px;
+  object-fit: cover;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  display: block;
+}
+
+@media (min-width: 1400px) {
+  .container {
+      max-width: 1400px;
+  }
+  
+  .hero-content-wrapper {
+      justify-content: center;
+      gap: 60px;
+  }
+  
+  .hero-text-column, 
+  .hero-image-column {
+      flex: 0 0 46%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .container {
+      max-width: 1600px;
+  }
+  
+  .hero-content-wrapper {
+      gap: 80px;
+  }
+  
+  .hero-text-column, 
+  .hero-image-column {
+      flex: 0 0 45%;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-content-wrapper {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 2.5rem;
+  }
+
+  .hero-text-column,
+  .hero-image-column {
+      flex-basis: auto;
+      width: 100%;
+      max-width: 650px;
+      align-items: center;
+  }
+  
+  .hero-text-column {
+      text-align: center;
+  }
+  
+  .hero-title {
+      font-size: 40px;
+  }
+
+  .hero-description,
+  .hero-stats {
+      font-size: 17px;
+      text-align: center;
+  }
+
+  .hero-actions {
+      justify-content: center;
+  }
+  
+  .hero-image-caption {
+      text-align: center;
+      font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+      padding: 2.5rem 0;
+  }
+
+  .hero-title {
+      font-size: 32px;
+  }
+
+  .hero-description,
+  .hero-stats {
+      font-size: 16px;
+  }
+  
+  .hero-stats-number {
+      display: block; 
+      margin: 0.25rem 0;
+  }
+
+  .hero-actions {
+      flex-direction: column;
+      align-items: center;  
+      gap: 1rem;
+  }
+
+  .btn {
+      width: 100%;
+      max-width: 320px;
+      padding: 12px 20px;
+      font-size: 16px;
+  }
+  
+  .hero-image-caption {
+      font-size: 18px;
+  }
+}
+
+.company-features {
+  margin: 2rem 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.feature-icon {
+  flex: 0 0 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(100, 252, 217, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.feature-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.feature-text {
+  flex: 1;
+}
+
+.feature-text h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.feature-text p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.company-stats {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  gap: 1.5rem;
+}
+
+.stat-item {
+  flex: 1 1 calc(50% - 0.75rem);
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .company-stats {
+    flex-direction: column;
+  }
+  
+  .stat-item {
+    flex: 1 1 100%;
+  }
+}

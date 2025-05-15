@@ -1,0 +1,73 @@
+.dashboard-footer {
+  background-image: url("../../img/div20.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  height: 100%;
+}
+
+.copyright {
+  color: #000000;
+  font-family: "Geist Mono", monospace;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.footer-link {
+  color: #000000;
+  font-family: "Geist Mono", monospace;
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .footer-content {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .copyright {
+    font-size: 14px;
+  }
+
+  .footer-link {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-footer {
+    padding: 15px 0;
+  }
+
+  .footer-content {
+    text-align: center;
+  }
+
+  .copyright {
+    font-size: 12px;
+  }
+}

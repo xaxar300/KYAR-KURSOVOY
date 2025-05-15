@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tracking>
+    <statuses>
+        <status>
+            <id>order</id>
+            <name>Заказ оформлен</name>
+            <description>Ваш заказ был успешно оформлен и принят в обработку</description>
+            <icon>order-placed.svg</icon>
+        </status>
+        <status>
+            <id>processing</id>
+            <name>В обработке</name>
+            <description>Ваш заказ обрабатывается на складе отправителя</description>
+            <icon>processing.svg</icon>
+        </status>
+        <status>
+            <id>shipped</id>
+            <name>Отправлено</name>
+            <description>Ваш заказ был отправлен и находится в пути</description>
+            <icon>shipped.svg</icon>
+        </status>
+        <status>
+            <id>customs</id>
+            <name>Таможня</name>
+            <description>Ваш заказ проходит таможенное оформление</description>
+            <icon>customs.svg</icon>
+        </status>
+        <status>
+            <id>delivered</id>
+            <name>Доставлено</name>
+            <description>Ваш заказ доставлен получателю</description>
+            <icon>delivered.svg</icon>
+        </status>
+    </statuses>
+    <sample_tracking>
+        <tracking_number>IMP24-000123</tracking_number>
+        <current_status>customs</current_status>
+        <events>
+            <event>
+                <date>2023-10-15</date>
+                <status>order</status>
+                <location>Минск, Беларусь</location>
+                <details>Заказ был размещен в системе</details>
+            </event>
+            <event>
+                <date>2023-10-17</date>
+                <status>processing</status>
+                <location>Пекин, Китай</location>
+                <details>Заказ принят в обработку на складе</details>
+            </event>
+            <event>
+                <date>2023-10-22</date>
+                <status>shipped</status>
+                <location>Гуанчжоу, Китай</location>
+                <details>Отправлен международной почтой</details>
+            </event>
+            <event>
+                <date>2023-11-05</date>
+                <status>customs</status>
+                <location>Таможня Беларуси</location>
+                <details>Посылка проходит таможенное оформление</details>
+            </event>
+        </events>
+    </sample_tracking>
+    <sample_tracking>
+        <tracking_number>IMP24-000124</tracking_number>
+        <current_status>delivered</current_status>
+        <events>
+            <event>
+                <date>2023-09-20</date>
+                <status>order</status>
+                <location>Минск, Беларусь</location>
+                <details>Заказ был размещен в системе</details>
+            </event>
+            <event>
+                <date>2023-09-22</date>
+                <status>processing</status>
+                <location>Варшава, Польша</location>
+                <details>Заказ принят в обработку на складе</details>
+            </event>
+            <event>
+                <date>2023-09-25</date>
+                <status>shipped</status>
+                <location>Варшава, Польша</location>
+                <details>Отправлен международной почтой</details>
+            </event>
+            <event>
+                <date>2023-09-28</date>
+                <status>customs</status>
+                <location>Таможня Беларуси</location>
+                <details>Посылка проходит таможенное оформление</details>
+            </event>
+            <event>
+                <date>2023-10-02</date>
+                <status>delivered</status>
+                <location>Минск, Беларусь</location>
+                <details>Посылка доставлена получателю</details>
+            </event>
+        </events>
+    </sample_tracking>
+</tracking> 

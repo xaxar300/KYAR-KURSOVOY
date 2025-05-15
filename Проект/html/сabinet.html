@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Import24 - Кабинет</title>
+
+    <link rel="icon" href="../img/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/dashboard/header.css" />
+    <link rel="stylesheet" href="../scss/cabinet/sidebar.css" />
+    <link rel="stylesheet" href="../css/dashboard/balance.css" />
+    <link rel="stylesheet" href="../css/dashboard/warehouse.css" />
+    <link rel="stylesheet" href="../css/dashboard/support.css" />
+    <link rel="stylesheet" href="../css/dashboard/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Geist Mono", monospace;
+        line-height: 1.6;
+        background-color: #fff;
+        color: #333;
+      }
+
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      a,
+      button,
+      input,
+      select,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        border: none;
+        text-decoration: none;
+        background: none;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      menu,
+      ol,
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .btn {
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background: #64fcd9;
+        border-radius: 10px;
+        border: 2px solid #000000;
+        font-family: "Geist Mono", monospace;
+        font-weight: 600;
+        color: #000000;
+      }
+
+      .dashboard-page-layout {
+        display: flex;
+        min-height: calc(100vh - 80px - 50px);
+      }
+
+      .sidebar {
+        width: 250px;
+        min-width: 250px;
+        padding: 20px 0;
+        background-color: #f5f5f5;
+      }
+
+      .main-content {
+        flex: 1;
+        padding: 20px 0;
+      }
+
+      .sidebar-title {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="dashboard-header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo-section">
+            <div class="logo">
+              <img src="../img/logo.svg" alt="Import24 Logo" />
+            </div>
+            <div class="logo-text">
+              <a href="main.html" style="color: #000"
+                ><span>Import<span class="logo-text-bold">24</span></span></a
+              >
+            </div>
+          </div>
+
+          <div class="user-actions">
+            <div class="user-profile">
+              <div class="user-profile-info">
+                <img
+                  src="../img/user0.svg"
+                  alt="User profile"
+                  class="user-icon"
+                />
+                <div class="user-details">
+                  Name Surname
+                  <br />
+                  ID: 00001
+                </div>
+              </div>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <div class="user-dropdown" id="userDropdown">
+              <div class="balance-widget">
+                <div class="balance-accounts">
+                  <div class="balance-account">
+                    <span class="balance-account-label">счет доставки</span>
+                    <span class="balance-account-value">0$</span>
+                  </div>
+                  <div class="balance-divider"></div>
+                  <div class="balance-account">
+                    <span class="balance-account-label">счет выкупа</span>
+                    <span class="balance-account-value">0$</span>
+                  </div>
+                </div>
+                <div class="balance-action">
+                  <button class="btn btn-primary">Пополнить баланс</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="dashboard-page-layout">
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Часовые пояса</h2>
+        <div class="timezone-display">
+          <div class="timezone-item" data-city="Минск">
+            <div class="timezone-time">
+              <span class="hours-minutes">00:00</span><span class="seconds">:00</span>
+            </div>
+          </div>
+          <div class="timezone-divider"></div>
+          <div class="timezone-item" data-city="Пекин">
+            <div class="timezone-time">
+              <span class="hours-minutes">00:00</span><span class="seconds">:00</span>
+            </div>
+          </div>
+          <div class="timezone-divider"></div>
+          <div class="timezone-item" data-city="Варшава">
+            <div class="timezone-time">
+              <span class="hours-minutes">00:00</span><span class="seconds">:00</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <div class="container">
+          <div class="dashboard-layout">
+            <div class="dashboard-row">
+              <section class="balance-section">
+                <h2 class="section-title">Ваш баланс</h2>
+
+                <div class="balance-card delivery-balance">
+                  <h3 class="balance-card-title">Счет доставки</h3>
+                  <div class="balance-card-amount">$0</div>
+                  <div class="balance-card-icon">
+                    <img src="../img/money0.svg" alt="Delivery balance icon" />
+                  </div>
+                </div>
+
+                <div class="balance-card purchase-balance">
+                  <h3 class="balance-card-title">Счет выкупа</h3>
+                  <div class="balance-card-amount">$0</div>
+                  <div class="balance-card-icon">
+                    <img src="../img/money0.svg" alt="Purchase balance icon" />
+                  </div>
+                </div>
+
+                <div class="promo-code-form">
+                  <div class="promo-input-wrapper">
+                    <input
+                      type="text"
+                      class="promo-input"
+                      placeholder="Введите промокод"
+                    />
+                  </div>
+                  <button class="promo-submit-btn">Ок</button>
+                </div>
+
+                <div class="promo-notification" id="promoNotification">
+                  <div class="promo-notification-icon">
+                    <img src="../img/success.svg" alt="Success" />
+                  </div>
+                  <div class="promo-notification-content">
+                    <h4>Промокод активирован!</h4>
+                    <p>Бонус +10% при следующем пополнении</p>
+                  </div>
+                </div>
+
+                <button class="btn btn-primary balance-add-btn">
+                  Пополнить счет
+                </button>
+              </section>
+
+              <section class="warehouse-section">
+                <div class="warehouse-header">
+                  <div class="warehouse-flags">
+                    <img src="../img/europeflag.svg" alt="Europe flag" />
+                    <h2 class="section-title">Адреса складов</h2>
+                    <img src="../img/chinaflag.jpg" alt="China flag" />
+                  </div>
+                </div>
+
+                <div class="warehouse-content">
+                  <div class="warehouse-contact-info">
+                    <div class="contact-item">
+                      <div class="contact-details">
+                        <div class="contact-label">Номер телефона EU:</div>
+                        <div class="contact-value">48133722811</div>
+                        <div class="contact-divider"></div>
+                      </div>
+                      <button
+                        class="copy-btn"
+                        data-clipboard-text="48133722811"
+                      >
+                        <img src="../img/copy.svg" alt="Copy" />
+                      </button>
+                    </div>
+
+                    <div class="contact-item">
+                      <div class="contact-details">
+                        <div class="contact-label">Номер телефона CNY:</div>
+                        <div class="contact-value">11411722811</div>
+                        <div class="contact-divider"></div>
+                      </div>
+                      <button
+                        class="copy-btn"
+                        data-clipboard-text="11411722811"
+                      >
+                        <img src="../img/copy.svg" alt="Copy" />
+                      </button>
+                    </div>
+
+                    <div class="contact-item">
+                      <div class="contact-details">
+                        <div class="contact-label">Имя получателя:</div>
+                        <div class="contact-value">IMP00001</div>
+                        <div class="contact-divider"></div>
+                      </div>
+                      <button class="copy-btn" data-clipboard-text="IMP00001">
+                        <img src="../img/copy.svg" alt="Copy" />
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="warehouse-addresses">
+                    <div class="address-region eu-addresses">
+                      <h3 class="address-region-title">
+                        Адрес складов в Европе:
+                      </h3>
+
+                      <div class="address-item">
+                        <div class="address-details">
+                          <div class="address-text">
+                            Starowiejska 174,
+                            <br />
+                            08-110 Siedlce, Poland
+                          </div>
+                          <div class="address-divider"></div>
+                        </div>
+                        <button
+                          class="copy-btn"
+                          data-clipboard-text="Starowiejska 174, 08-110 Siedlce, Poland"
+                        >
+                          <img src="../img/copy.svg" alt="Copy" />
+                        </button>
+                      </div>
+
+                      <div class="address-item">
+                        <div class="address-details">
+                          <div class="address-text">
+                            Neusser Str. 204,
+                            <br />
+                            50733 Köln, Germany
+                          </div>
+                          <div class="address-divider"></div>
+                        </div>
+                        <button
+                          class="copy-btn"
+                          data-clipboard-text="Neusser Str. 204, 50733 Köln, Germany"
+                        >
+                          <img src="../img/copy.svg" alt="Copy" />
+                        </button>
+                      </div>
+
+                      <div class="address-item">
+                        <div class="address-details">
+                          <div class="address-text">
+                            Via Lavoratori
+                            <br />
+                            Autobianchi 1,
+                            <br />
+                            20832 Desio MB, Italy
+                          </div>
+                          <div class="address-divider"></div>
+                        </div>
+                        <button
+                          class="copy-btn"
+                          data-clipboard-text="Via Lavoratori Autobianchi 1, 20832 Desio MB, Italy"
+                        >
+                          <img src="../img/copy.svg" alt="Copy" />
+                        </button>
+                      </div>
+
+                      <div class="marketplace-help">
+                        <img
+                          src="../img/help-circle0.svg"
+                          alt="Help"
+                          class="help-icon"
+                        />
+                        <div class="marketplace-help-text">
+                          Как заполнить адрес склада
+                          <br />
+                          на <span class="marketplace">Vinted</span> или
+                          <span class="marketplace">Grailed</span>?
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="address-region cn-addresses">
+                      <div class="address-item">
+                        <div class="address-details">
+                          <h3 class="address-region-title">
+                            Адрес склада в Китае:
+                          </h3>
+                          <div class="address-text">
+                            WJFH+M38, Xingye St,
+                            <br />
+                            Xigang District, Dalian,
+                            <br />
+                            Dalian, Liaoning, Китай, 116011
+                          </div>
+                          <div class="address-divider"></div>
+                        </div>
+                        <button
+                          class="copy-btn"
+                          data-clipboard-text="WJFH+M38, Xingye St, Xigang District, Dalian, Dalian, Liaoning, Китай, 116011"
+                        >
+                          <img src="../img/copy.svg" alt="Copy" />
+                        </button>
+                      </div>
+
+                      <div class="marketplace-help">
+                        <img
+                          src="../img/help-circle0.svg"
+                          alt="Help"
+                          class="help-icon"
+                        />
+                        <div class="marketplace-help-text">
+                          Как заполнить адрес склада
+                          <br />
+                          на <span class="marketplace">TaoBao</span> или
+                          <span class="marketplace">Poizon</span>?
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="warehouse-illustration">
+                  <img
+                    src="../img/navigate-rock-the-boat0.svg"
+                    alt="Delivery illustration"
+                  />
+                </div>
+              </section>
+            </div>
+
+            <div class="support-social-container">
+              <section class="support-section">
+                <div class="support-header">
+                  <div class="support-text">
+                    <h2 class="section-title">Остались вопросы?</h2>
+                    <p class="support-description">
+                      Оставьте свой телеграм, чтобы
+                      <br />
+                      сотрудник службы поддержки
+                      <br />
+                      связался с вами в самое
+                      <br />
+                      ближайшее время
+                    </p>
+                  </div>
+                  <img
+                    src="../img/tg.png"
+                    alt="Telegram"
+                    class="support-icon"
+                  />
+                </div>
+
+                <div class="support-form">
+                  <div class="telegram-input-wrapper">
+                    <input
+                      type="text"
+                      class="telegram-input"
+                      placeholder="Введите свой @username"
+                    />
+                  </div>
+                  <button class="btn btn-primary support-submit-btn">
+                    Отправить
+                  </button>
+                </div>
+
+                <div class="support-notification" id="supportNotification">
+                  <div class="support-notification-icon">
+                    <img src="../img/success.svg" alt="Success" />
+                  </div>
+                  <div class="support-notification-message">
+                    Запрос отправлен! Мы свяжемся с вами в ближайшее время.
+                  </div>
+                </div>
+              </section>
+
+              <section class="social-section">
+                <h2 class="section-title">Наши соц.сети</h2>
+
+                <div class="social-links">
+                  <div class="social-icons">
+                    <a href="#" class="social-icon-link">
+                      <img
+                        src="../img/inst.png"
+                        alt="Instagram"
+                        class="social-icon"
+                      />
+                    </a>
+                    <a href="#" class="social-icon-link">
+                      <img
+                        src="../img/tg.png"
+                        alt="Telegram"
+                        class="social-icon"
+                      />
+                    </a>
+                    <a href="#" class="social-icon-link">
+                      <img src="../img/vk.png" alt="VK" class="social-icon" />
+                    </a>
+                    <a href="#" class="social-icon-link">
+                      <img
+                        src="../img/youtube.png"
+                        alt="YouTube"
+                        class="social-icon"
+                      />
+                    </a>
+                  </div>
+
+                  <div class="social-usernames">
+                    <div class="social-username">@import24</div>
+                    <div class="social-username">@tg_import24</div>
+                    <div class="social-username">vk.com/import24</div>
+                    <div class="social-username">youtube.com/import24</div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer class="dashboard-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="copyright">©2023-2028 Import24 Все права защищены</div>
+          <a href="#" class="footer-link">Условия Пользования</a>
+          <a href="#" class="footer-link">Политика Конфиденциальности</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toast-notification" id="copyToast">
+      <div class="toast-icon">
+        <img src="../img/check.svg" alt="Success" />
+      </div>
+      <div class="toast-message">Текст скопирован!</div>
+    </div>
+
+    <div class="payment-modal" id="paymentModal">
+      <div class="payment-modal-content">
+        <div class="payment-modal-header">
+          <h3>Пополнить баланс</h3>
+          <button class="payment-close-btn">&times;</button>
+        </div>
+
+        <div class="payment-step" id="paymentMethodStep">
+          <h4>Выберите способ оплаты</h4>
+          <div class="payment-methods">
+            <button class="payment-method" data-method="card">
+              <img
+                src="../img/credit-card.png"
+                alt="Card"
+                class="payment-method-icon"
+              />
+              <span>Банковская карта</span>
+            </button>
+            <button class="payment-method" data-method="crypto">
+              <img
+                src="../img/crypto.png"
+                alt="Crypto"
+                class="payment-method-icon"
+              />
+              <span>Криптовалюта</span>
+            </button>
+            <button class="payment-method" data-method="p2p">
+              <img src="../img/p2p.svg" alt="P2P" class="payment-method-icon" />
+              <span>P2P перевод</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="payment-step" id="cardPaymentStep">
+          <button class="back-btn">&larr; Назад</button>
+          <h4>Оплата картой</h4>
+          <form id="cardPaymentForm">
+            <div class="form-group">
+              <label>Сумма пополнения ($)</label>
+              <input
+                type="number"
+                id="cardAmount"
+                min="1"
+                required
+                placeholder="Введите сумму"
+              />
+            </div>
+            <div class="form-group">
+              <label>Выберите счет</label>
+              <select id="accountSelect" required>
+                <option value="">Выберите тип счета</option>
+                <option value="delivery">Счет доставки</option>
+                <option value="purchase">Счет выкупа</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Номер карты</label>
+              <input
+                type="text"
+                id="cardNumber"
+                placeholder="1234 5678 9012 3456"
+                maxlength="19"
+                required
+              />
+              <div class="error-message" id="cardNumberError"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group half">
+                <label>Срок действия</label>
+                <input
+                  type="text"
+                  id="cardExpiry"
+                  placeholder="ММ/ГГ"
+                  maxlength="5"
+                  required
+                />
+                <div class="error-message" id="cardExpiryError"></div>
+              </div>
+              <div class="form-group half">
+                <label>CVC</label>
+                <input
+                  type="text"
+                  id="cardCvc"
+                  placeholder="123"
+                  maxlength="3"
+                  required
+                />
+                <div class="error-message" id="cardCvcError"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Имя держателя карты</label>
+              <input
+                type="text"
+                id="cardHolder"
+                placeholder="IVAN IVANOV"
+                required
+              />
+              <div class="error-message" id="cardHolderError"></div>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary payment-submit-btn"
+              disabled
+            >
+              Оплатить
+            </button>
+          </form>
+        </div>
+
+        <div class="payment-step" id="developmentStep">
+          <button class="back-btn">&larr; Назад</button>
+          <div class="development-message">
+            <img
+              src="../img/development.svg"
+              alt="In development"
+              class="development-icon"
+            />
+            <h4>В разработке</h4>
+            <p>
+              Данный способ оплаты находится в разработке и будет доступен в
+              ближайшее время.
+            </p>
+          </div>
+        </div>
+
+        <div class="payment-step" id="successStep">
+          <div class="success-message">
+            <img src="../img/success.svg" alt="Success" class="success-icon" />
+            <h4>Оплата прошла успешно!</h4>
+            <p>Ваш баланс был успешно пополнен.</p>
+            <button class="btn btn-primary close-success-btn">Закрыть</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+  </body>
+</html>

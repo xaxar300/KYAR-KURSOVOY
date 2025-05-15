@@ -1,0 +1,201 @@
+.track-package-section {
+    padding: 3rem 0;
+  }
+  
+  .track-package-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .track-package-wrapper {
+    background: #d9d9d9;
+    border-radius: 15px;
+    padding: 30px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .track-package-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .track-package-title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 280px;
+    max-width: 330px;
+  }
+  
+  .track-package-title {
+    color: #000000;
+    font-family: 'Geist Mono', monospace;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 5px;
+  }
+  
+  .track-package-title-underline {
+    background: #48c2b7;
+    border-radius: 2px;
+    height: 6px;
+    width: 100%;
+  }
+  
+  .track-package-input-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .track-package-input {
+    background: #8b8b8b;
+    border: solid black 2px;
+    border-radius: 15px;
+    padding: 10px 20px;
+    height: 60px;
+    width: 100%;
+    max-width: 870px;
+    flex: 1;
+    font-family: 'Geist Mono', monospace;
+    font-size: 24px;
+    font-weight: 300;
+    color: #000000;
+  }
+  
+  .track-package-input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: underline;
+    opacity: 0.6;
+  }
+  
+  .track-package-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #48c2b7;
+  }
+  
+  .track-package-button {
+    background: #64fcd9;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    padding: 0 20px;
+    height: 60px;
+    min-width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Geist Mono', monospace;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .track-package-button:hover {
+    background-color: #50e8c0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (min-width: 1400px) {
+    .track-package-container {
+      max-width: 1400px;
+    }
+  }
+  
+  @media (min-width: 1800px) {
+    .track-package-container {
+      max-width: 1600px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .track-package-title {
+      font-size: 28px;
+    }
+    
+    .track-package-input {
+      font-size: 20px;
+    }
+    
+    .track-package-button {
+      font-size: 18px;
+    }
+    
+    .track-package-content {
+      gap: 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .track-package-wrapper {
+      padding: 20px 15px;
+    }
+    
+    .track-package-title-container {
+      width: 100%;
+      max-width: none;
+      text-align: center;
+      align-items: center;
+    }
+    
+    .track-package-title {
+      font-size: 24px;
+    }
+    
+    .track-package-title-underline {
+      max-width: 280px;
+    }
+    
+    .track-package-input {
+      font-size: 18px;
+      height: 55px;
+    }
+    
+    .track-package-button {
+      width: 100%;
+      font-size: 18px;
+      height: 55px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .track-package-section {
+      padding: 2rem 0;
+    }
+    
+    .track-package-wrapper {
+      padding: 15px 10px;
+    }
+    
+    .track-package-title {
+      font-size: 22px;
+    }
+    
+    .track-package-input {
+      font-size: 16px;
+      height: 50px;
+      padding: 10px 15px;
+    }
+    
+    .track-package-button {
+      font-size: 16px;
+      height: 50px;
+    }
+  }

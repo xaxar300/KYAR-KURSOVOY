@@ -1,0 +1,234 @@
+$primary-color: #64fcd9;
+$teal-dark: #1a4842;
+$teal-medium: #26887a;
+$white: #ffffff;
+$gray: #a0a0a0;
+$transparent-white-1: rgba(255, 255, 255, 0.08);
+$transparent-white-2: rgba(255, 255, 255, 0.3);
+$primary-transparent: rgba(100, 252, 217, 0.25);
+$primary-glow: rgba(100, 252, 217, 0.3);
+$sidebar-width: 250px;
+$sidebar-width-tablet: 220px;
+$sidebar-width-mobile: 200px;
+$font-family: 'Geist Mono', monospace;
+
+// Mixins
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin gradient-text {
+  background: -webkit-linear-gradient(#ffffff, $primary-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin transition {
+  transition: all 0.3s ease;
+}
+
+@mixin shadowed-container {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  background-color: $transparent-white-1;
+}
+
+// Keyframes
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+// Sidebar base styling
+.sidebar {
+  width: $sidebar-width;
+  background: linear-gradient(135deg, $teal-dark 0%, $teal-medium 100%);
+  @include flex-column;
+  padding: 30px 0;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../img/world-map.svg');
+    background-size: 250%;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 0;
+  }
+  
+  // Sidebar title styling
+  &-title {
+    color: $primary-color;
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    
+    &::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 3px;
+      background-color: $primary-color;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+  }
+}
+
+// Timezone display container
+.timezone-display {
+  @include flex-column;
+  width: 85%;
+  box-sizing: border-box;
+  background-color: rgba(38, 136, 122, 0.4);
+  border-radius: 12px;
+  border: 1px solid rgba(100, 252, 217, 0.3);
+  padding: 20px 15px;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+// Timezone item styling
+.timezone-item {
+  color: $white;
+  text-align: center;
+  font-family: $font-family;
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%;
+  padding: 15px 10px;
+  border-radius: 8px;
+  position: relative;
+  @include transition;
+  @include flex-column;
+  
+  &:hover {
+    background-color: $primary-transparent;
+    transform: translateY(-2px);
+  }
+  
+  // City name from data attribute
+  &::before {
+    content: attr(data-city);
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: $primary-color;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+  }
+  
+  // Flag emojis for each city
+  &:nth-child(1)::after {
+    content: '🇧🇾';
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    font-size: 16px;
+  }
+  
+  &:nth-child(3)::after {
+    content: '🇨🇳';
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    font-size: 16px;
+  }
+  
+  &:nth-child(5)::after {
+    content: '🇵🇱';
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    font-size: 16px;
+  }
+  
+  // Seconds display with animation
+  .seconds {
+    color: $primary-color;
+    animation: pulse 1s infinite;
+    display: inline-block;
+  }
+}
+
+// Divider styling
+.timezone-divider {
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(100, 252, 217, 0.4), transparent);
+  margin: 5px 0;
+}
+
+// Digital clock styling
+.timezone-time {
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  @include gradient-text;
+  text-shadow: 0 0 10px $primary-glow;
+}
+
+// Responsive adjustments
+@media (max-width: 992px) {
+  .sidebar {
+    width: $sidebar-width-tablet;
+    
+    &-title {
+      font-size: 20px;
+    }
+  }
+  
+  .timezone-item {
+    font-size: 18px;
+  }
+  
+  .timezone-time {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: $sidebar-width-mobile;
+  }
+  
+  .timezone-item {
+    font-size: 16px;
+  }
+  
+  .timezone-time {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+  
+  .main-content {
+    width: 100% !important;
+    padding-left: 0;
+  }
+  
+  .dashboard-page-layout {
+    flex-direction: column;
+  }
+} 

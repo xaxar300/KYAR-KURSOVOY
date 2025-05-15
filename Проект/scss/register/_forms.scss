@@ -1,0 +1,163 @@
+// Forms
+form {
+  @include flex(column, flex-start, stretch);
+  gap: $spacing-lg;
+}
+
+.form-row {
+  @include flex(row, space-between, flex-start);
+  gap: $spacing-lg;
+  width: 100%;
+  
+  @include tablet {
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+}
+
+.form-group {
+  @include flex(column, flex-start, stretch);
+  flex: 1;
+  position: relative;
+}
+
+.form-group-full {
+  width: 100%;
+  position: relative;
+}
+
+.form-input {
+  @include form-input;
+}
+
+.error-message {
+  @include error-message;
+}
+
+// Phone input
+.phone-input {
+  @include flex(row, flex-start, center);
+  background: $background-color;
+  border-radius: $border-radius;
+  border: $border-width solid $text-color;
+  padding: 0 $spacing-sm;
+  height: $input-height;
+}
+
+.flag-container {
+  @include flex(row, center, center);
+  margin-right: $spacing-sm;
+}
+
+.flag {
+  width: 40px;
+  height: 25px;
+}
+
+.phone-number-input {
+  font-family: $font-family-base;
+  font-size: $font-size-large;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  
+  &::placeholder {
+    opacity: 0.3;
+  }
+}
+
+// Password field
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-toggle {
+  position: absolute;
+  right: $spacing-md;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  padding: 0;
+  @include flex;
+}
+
+.eye-icon {
+  width: 24px;
+  height: 24px;
+}
+
+// Checkbox
+.checkbox-container {
+  @include flex(row, flex-start, flex-start);
+  gap: $spacing-md;
+  margin-top: $spacing-sm;
+  
+  @include tablet {
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  cursor: pointer;
+  
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    
+    &:checked ~ .checkmark:after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 15px;
+      top: 5px;
+      width: 10px;
+      height: 20px;
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: $border-width solid $text-color;
+  border-radius: 5px;
+  background-color: $background-color;
+}
+
+// Buttons
+.btn {
+  @include button-base;
+  
+  @include mobile {
+    width: 100%;
+  }
+  
+  &-primary {
+    background-color: $primary-color;
+  }
+  
+  &-secondary {
+    background-color: $background-color;
+  }
+} 

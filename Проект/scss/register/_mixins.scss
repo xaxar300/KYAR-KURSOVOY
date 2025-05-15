@@ -1,0 +1,58 @@
+// Flex mixins
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Media query mixins
+@mixin tablet {
+  @media only screen and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+// Input styling
+@mixin form-input {
+  background: $background-color;
+  border-radius: $border-radius;
+  border: $border-width solid $text-color;
+  padding: $spacing-md;
+  font-family: $font-family-base;
+  font-size: $font-size-large;
+  height: $input-height;
+  width: 100%;
+  
+  &::placeholder {
+    opacity: 0.3;
+  }
+}
+
+// Button styling
+@mixin button-base {
+  border-radius: $border-radius;
+  border: $border-width-thick solid $text-color;
+  padding: $spacing-md $spacing-lg;
+  font-family: $font-family-semibold;
+  font-size: $font-size-large;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  width: 280px;
+  height: $input-height;
+}
+
+// Error message
+@mixin error-message {
+  color: $error-color;
+  font-size: $font-size-small;
+  margin-top: 4px;
+  min-height: 18px;
+} 

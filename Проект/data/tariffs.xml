@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tariffs>
+    <tariff>
+        <id>economy</id>
+        <name>IMP ECONOMY</name>
+        <delivery_time>21-30 дней</delivery_time>
+        <price>15.99</price>
+        <price_unit>BYN</price_unit>
+        <unit_weight>кг</unit_weight>
+        <description>Для жителей Беларуси, доставка габаритных грузов вплоть до 30кг, объёмный вес не учитывается. Подходит для товаров с батареями</description>
+        <color_scheme>
+            <background>linear-gradient(135deg, #64fcd9 0%, #00d9e1 100%)</background>
+        </color_scheme>
+    </tariff>
+    <tariff>
+        <id>express</id>
+        <name>IMP EXPRESS</name>
+        <delivery_time>7-12 дней</delivery_time>
+        <price>20.99</price>
+        <price_unit>BYN</price_unit>
+        <unit_weight>кг</unit_weight>
+        <description>Для жителей Беларуси и России, подходит для частой доставки одежды, обуви и аксессуаров. Объёмный вес рассчитывается по формуле. Не подходит для батарей, жидкостей и т. д.</description>
+        <color_scheme>
+            <background>linear-gradient(135deg, #00d9e1 0%, #64fcd9 100%)</background>
+        </color_scheme>
+    </tariff>
+    <tariff>
+        <id>super-express</id>
+        <name>IMP SUPER EXPRESS</name>
+        <delivery_time>3-5 дней</delivery_time>
+        <price>35.99</price>
+        <price_unit>BYN</price_unit>
+        <unit_weight>кг</unit_weight>
+        <description>Премиальная доставка с максимальной скоростью. Для срочных отправлений. Включает приоритетную обработку и отправку первым классом.</description>
+        <color_scheme>
+            <background>linear-gradient(135deg, #FFD700 0%, #FFA500 100%)</background>
+        </color_scheme>
+    </tariff>
+</tariffs>

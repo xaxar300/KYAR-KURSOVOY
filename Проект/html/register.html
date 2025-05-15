@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Import24 - Регистрация</title>
+  <link rel="icon" href="../img/logo.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="../scss/register/main.css">
+  <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+  <div class="page-container">
+    <section class="form-section">
+      <header class="header">
+        <h1>Создать аккаунт</h1>
+        <div class="header-line"></div>
+      </header>
+
+      <div class="main-content">
+        <form id="registrationForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="firstName">Имя*</label>
+              <input class="form-input" type="text" id="firstName" name="firstName" placeholder="Введите имя" required>
+              <div class="error-message" id="firstNameError"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lastName">Фамилия*</label>
+              <input class="form-input" type="text" id="lastName" name="lastName" placeholder="Введите фамилию" required>
+              <div class="error-message" id="lastNameError"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="phone">Телефон*</label>
+              <div class="phone-input">
+                <div class="flag-container">
+                  <img src="../img/belarus.png" alt="Belarus Flag" class="flag">
+                </div>
+                <span class="country-code">+375</span>
+                <input type="tel" id="phone" name="phone" class="phone-number-input" placeholder="(xx)xxx-xx-xx" required>
+              </div>
+              <div class="error-message" id="phoneError"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="referralCode">Реферальный код</label>
+              <input class="form-input" type="text" id="referralCode" name="referralCode" placeholder="Введите код">
+            </div>
+          </div>
+
+          <div class="form-group-full">
+            <label class="form-label" for="email">Email*</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="example@example.com" required>
+            <div class="error-message" id="emailError"></div>
+          </div>
+
+          <div class="form-group-full">
+            <label class="form-label" for="password">Пароль*</label>
+            <div class="password-container">
+              <input class="form-input" type="password" id="password" name="password" placeholder="Введите пароль" required>
+              <button type="button" class="password-toggle" tabindex="-1">
+                <img src="../img/eye-off0.svg" alt="Show/Hide Password" class="eye-icon">
+              </button>
+            </div>
+            <div class="error-message" id="passwordError"></div>
+          </div>
+
+          <div class="form-group-full">
+            <label class="form-label" for="confirmPassword">Повтор пароля*</label>
+            <div class="password-container">
+              <input class="form-input" type="password" id="confirmPassword" name="confirmPassword" placeholder="Введите пароль" required>
+              <button type="button" class="password-toggle" tabindex="-1">
+                <img src="../img/eye-off1.svg" alt="Show/Hide Password" class="eye-icon">
+              </button>
+            </div>
+            <div class="error-message" id="confirmPasswordError"></div>
+          </div>
+
+          <div class="checkbox-container">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="termsCheckbox" name="termsCheckbox" required>
+              <span class="checkmark"></span>
+            </label>
+            <div class="checkbox-label">
+              С <a href="#">условиями пользования</a> и <a href="#">политикой конфиденциальности</a> ознакомлен
+            </div>
+          </div>
+          <div class="error-message" id="termsError"></div>
+        </form>
+      </div>
+
+      <footer>
+        <div class="form-buttons">
+          <button class="btn btn-primary" id="submitButton" type="button">Создать аккаунт</button>
+          <a href="main.html" class="btn btn-secondary" id="cancelButton">Отменить</a>
+        </div>
+        <div class="login-text">
+          Уже регистрировались? <a href="login.html" class="login-link">Войти в аккаунт</a>
+        </div>
+      </footer>
+    </section>
+
+    <div class="hero-section">
+      <div class="hero-logo-container">
+        <div class="logo-wrapper">
+          <img src="../img/logo.svg" alt="Import24 Logo" class="logo">
+          <div class="logo-text">Import<span class="logo-highlight">24</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/reg.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<svg width="600" height="300" viewBox="0 0 600 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M50,125 Q100,50 150,100 T250,75 T350,125 T450,100 T550,150" stroke="#64fcd9" stroke-width="1" fill="none" opacity="0.1"/>
+  <path d="M50,150 Q150,100 250,150 T350,100 T450,175 T550,125" stroke="#64fcd9" stroke-width="1" fill="none" opacity="0.1"/>
+  <path d="M50,175 Q100,200 150,150 T250,200 T350,150 T450,175 T550,200" stroke="#64fcd9" stroke-width="1" fill="none" opacity="0.1"/>
+  <!-- Europe -->
+  <path d="M300,100 Q320,95 330,100 T350,90 T370,100 T380,95 T390,100" stroke="#64fcd9" stroke-width="1.5" fill="none" opacity="0.2"/>
+  <!-- Asia -->
+  <path d="M350,100 Q380,110 400,105 T420,115 T450,105 T480,110 T500,100" stroke="#64fcd9" stroke-width="1.5" fill="none" opacity="0.2"/>
+  <!-- North America -->
+  <path d="M100,100 Q120,90 140,95 T160,85 T180,95 T200,90 T220,100" stroke="#64fcd9" stroke-width="1.5" fill="none" opacity="0.2"/>
+  <!-- South America -->
+  <path d="M150,150 Q160,180 180,190 T190,210 T200,220" stroke="#64fcd9" stroke-width="1.5" fill="none" opacity="0.2"/>
+  <!-- Africa -->
+  <path d="M300,120 Q320,150 330,170 T340,190 T350,210" stroke="#64fcd9" stroke-width="1.5" fill="none" opacity="0.2"/>
+  <!-- Australia -->
+  <path d="M480,180 Q500,190 520,185 T530,200 T520,210" stroke="#64fcd9" stroke-width="1.5" fill="none" opacity="0.2"/>
+  <!-- City dots -->
+  <circle cx="335" cy="97" r="3" fill="#64FCD9" opacity="0.8"/> <!-- Warsaw -->
+  <circle cx="370" cy="90" r="3" fill="#64FCD9" opacity="0.8"/> <!-- Minsk -->
+  <circle cx="450" cy="105" r="3" fill="#64FCD9" opacity="0.8"/> <!-- Beijing -->
+</svg> 

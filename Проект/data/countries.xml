@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<countries>
+    <country>
+        <code>BY</code>
+        <name>Беларусь</name>
+        <flag_icon>belarus.png</flag_icon>
+        <delivery_available>true</delivery_available>
+        <address>
+            <warehouse>
+                <address_line>Минск, ул. Платонова, д. 49, офис 36</address_line>
+                <postal_code>220005</postal_code>
+            </warehouse>
+        </address>
+        <phone_code>+375</phone_code>
+        <currency>BYN</currency>
+        <delivery_options>
+            <option>Европочта</option>
+            <option>СДЕК</option>
+            <option>БелПочта</option>
+        </delivery_options>
+    </country>
+    <country>
+        <code>CN</code>
+        <name>Китай</name>
+        <flag_icon>chinaflag.jpg</flag_icon>
+        <delivery_available>true</delivery_available>
+        <address>
+            <warehouse>
+                <address_line>WJFH+M38, Xingye St, Xigang District, Dalian</address_line>
+                <postal_code>116011</postal_code>
+            </warehouse>
+        </address>
+        <phone_code>+86</phone_code>
+        <currency>CNY</currency>
+    </country>
+    <country>
+        <code>PL</code>
+        <name>Польша</name>
+        <flag_icon>europeflag.svg</flag_icon>
+        <delivery_available>true</delivery_available>
+        <address>
+            <warehouse>
+                <address_line>Starowiejska 174, 08-110 Siedlce, Poland</address_line>
+            </warehouse>
+        </address>
+        <phone_code>+48</phone_code>
+        <currency>PLN</currency>
+    </country>
+    <country>
+        <code>DE</code>
+        <name>Германия</name>
+        <flag_icon>europeflag.svg</flag_icon>
+        <delivery_available>true</delivery_available>
+        <address>
+            <warehouse>
+                <address_line>Neusser Str. 204, 50733 Köln, Germany</address_line>
+            </warehouse>
+        </address>
+        <phone_code>+49</phone_code>
+        <currency>EUR</currency>
+    </country>
+    <country>
+        <code>IT</code>
+        <name>Италия</name>
+        <flag_icon>europeflag.svg</flag_icon>
+        <delivery_available>true</delivery_available>
+        <address>
+            <warehouse>
+                <address_line>Via Lavoratori Autobianchi 1, 20832 Desio MB, Italy</address_line>
+            </warehouse>
+        </address>
+        <phone_code>+39</phone_code>
+        <currency>EUR</currency>
+    </country>
+</countries> 

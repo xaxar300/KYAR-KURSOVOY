@@ -1,0 +1,256 @@
+.support-section {
+  background: #ffffff;
+  border-radius: 35px;
+  border: 1px solid #000000;
+  padding: 15px 25px;
+  width: 365px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+
+.support-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.support-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.support-description {
+  color: #000000;
+  font-family: 'Geist Mono', monospace;
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.support-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.support-form {
+  background: #d9d9d9;
+  border-radius: 10px;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.telegram-input-wrapper {
+  background: #959595;
+  border-radius: 10px;
+  width: 100%;
+  height: 30px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.telegram-input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  padding: 0 10px;
+  color: #ffffff;
+  font-family: 'Geist Mono', monospace;
+  font-size: 13px;
+  font-weight: 400;
+  outline: none;
+}
+
+.telegram-input::placeholder {
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.support-submit-btn {
+  background: #64fcd9;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  padding: 8px 15px;
+  color: #000000;
+  font-family: 'Geist Mono', monospace;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 120px;
+}
+
+.social-section {
+  background: #ffffff;
+  border-radius: 35px;
+  border: 1px solid #000000;
+  padding: 18px 26px;
+  width: 245px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.social-usernames {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 168px;
+}
+
+.social-username {
+  color: #000000;
+  font-family: 'Geist Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .support-section, .social-section {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .support-header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .support-text {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .social-links {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .support-notification {
+    left: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .support-section, .social-section {
+    padding: 15px;
+  }
+  
+  .social-usernames {
+    gap: 25px;
+  }
+  
+  .social-username {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .support-description {
+    font-size: 12px;
+  }
+  
+  .support-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .support-form {
+    padding: 10px;
+  }
+  
+  .social-icons {
+    gap: 15px;
+  }
+  
+  .social-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .support-notification {
+    padding: 10px;
+  }
+  
+  .support-notification-message {
+    font-size: 11px;
+  }
+}
+
+.support-notification {
+  background: #E7FFF2;
+  border: 1px solid #00C853;
+  border-radius: 10px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 100%;
+  left: 25px;
+  right: 25px;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 200, 83, 0.15);
+  pointer-events: none;
+}
+
+.support-notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.support-notification-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.support-notification-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.support-notification-message {
+  color: #00883A;
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+}

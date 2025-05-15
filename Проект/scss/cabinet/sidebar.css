@@ -1,0 +1,182 @@
+@charset "UTF-8";
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.sidebar {
+  width: 250px;
+  background: linear-gradient(135deg, #1a4842 0%, #26887a 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+.sidebar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../img/world-map.svg");
+  background-size: 250%;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 0;
+}
+.sidebar-title {
+  color: #64fcd9;
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.sidebar-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #64fcd9;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.timezone-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  box-sizing: border-box;
+  background-color: rgba(38, 136, 122, 0.4);
+  border-radius: 12px;
+  border: 1px solid rgba(100, 252, 217, 0.3);
+  padding: 20px 15px;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.timezone-item {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Geist Mono", monospace;
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%;
+  padding: 15px 10px;
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timezone-item:hover {
+  background-color: rgba(100, 252, 217, 0.25);
+  transform: translateY(-2px);
+}
+.timezone-item::before {
+  content: attr(data-city);
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #64fcd9;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+.timezone-item:nth-child(1)::after {
+  content: "🇧🇾";
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  font-size: 16px;
+}
+.timezone-item:nth-child(3)::after {
+  content: "🇨🇳";
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  font-size: 16px;
+}
+.timezone-item:nth-child(5)::after {
+  content: "🇵🇱";
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  font-size: 16px;
+}
+.timezone-item .seconds {
+  color: #64fcd9;
+  animation: pulse 1s infinite;
+  display: inline-block;
+}
+
+.timezone-divider {
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(100, 252, 217, 0.4), transparent);
+  margin: 5px 0;
+}
+
+.timezone-time {
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  background: -webkit-linear-gradient(#ffffff, #64fcd9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(100, 252, 217, 0.3);
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    width: 220px;
+  }
+  .sidebar-title {
+    font-size: 20px;
+  }
+  .timezone-item {
+    font-size: 18px;
+  }
+  .timezone-time {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+  .timezone-item {
+    font-size: 16px;
+  }
+  .timezone-time {
+    font-size: 18px;
+  }
+}
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+  .main-content {
+    width: 100% !important;
+    padding-left: 0;
+  }
+  .dashboard-page-layout {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=sidebar.css.map */

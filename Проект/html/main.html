@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Import24</title>
+
+    <link rel="icon" href="../img/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="../scss/mainpage/header.css" />
+    <link rel="stylesheet" href="../scss/mainpage/main.css" />
+    <link rel="stylesheet" href="../css/main/hero.css" />
+    <link rel="stylesheet" href="../css/main/track.css" />
+    <link rel="stylesheet" href="../css/main/delivery.css" />
+    <link rel="stylesheet" href="../css/main/tariffs.css" />
+    <link rel="stylesheet" href="../css/main/footer.css" />
+    <link rel="stylesheet" href="../css/main/faq.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo-section">
+            <div class="logo">
+              <img src="../img/logo.svg" alt="Import24 Logo" />
+            </div>
+            <div class="logo-text">
+              <span>Import<span class="logo-text-bold">24</span></span>
+            </div>
+          </div>
+
+          <nav class="desktop-nav">
+            <ul class="nav-list">
+              <li><a href="#tariffs">О тарифах</a></li>
+              <li><a href="#about">О нас</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li>
+                <a href="../html/сabinet.html" class="login-btn"
+                  >Личный кабинет</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="mobile-nav">
+          <ul class="mobile-nav-list">
+            <li><a href="#tariffs">О тарифах</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li>
+              <a href="../html/сabinet.html" class="login-btn"
+                >Личный кабинет</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content-wrapper">
+            <div class="hero-text-column">
+              <h1 class="hero-title">
+                Доставляем товары в
+                <span class="hero-title-accent">Беларусь</span> со всего мира
+              </h1>
+              <p class="hero-description">
+                Выкупаем товары на китайских и европейских маркетплейсах:
+                <br />
+                <span class="hero-marketplace-name">Poizon</span>,
+                <span class="hero-marketplace-name">TaoBao</span>,
+                <span class="hero-marketplace-name">Vinted</span>,
+                <span class="hero-marketplace-name">Grailed</span>
+                <span class="hero-marketplace-etc"
+                  >и других интернет-магазинах</span
+                >
+              </p>
+              <p class="hero-stats">
+                <span class="hero-stats-intro">Более</span>
+                <span class="hero-stats-number">15 000</span>
+                <span class="hero-stats-outro"
+                  >довольных пользователей
+                  <br />
+                  Cтань одним из них!</span
+                >
+              </p>
+              <div class="hero-actions">
+                <a href="register.html" class="btn btn-primary"
+                  >Зарегистрироваться</a
+                >
+                <a href="#tariffs" class="btn btn-secondary">О тарифах</a>
+              </div>
+            </div>
+            <div class="hero-image-column">
+              <p class="hero-image-caption">
+                Мы предлагаем лучшие условия для байеров
+              </p>
+              <img
+                src="../img/main-page-logo0.png"
+                alt="Иллюстрация международной доставки Import24"
+                class="hero-image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="track-package-section" id="track">
+        <div class="track-package-container">
+          <div class="track-package-wrapper">
+            <div class="track-package-content">
+              <div class="track-package-title-container">
+                <h2 class="track-package-title">Отследить посылку</h2>
+                <div class="track-package-title-underline"></div>
+              </div>
+              <div class="track-package-input-container">
+                <input
+                  type="text"
+                  class="track-package-input"
+                  id="track-package-input"
+                  placeholder="Трек-номер в формате IMP24-000000"
+                />
+                <button class="track-package-button" id="track-package-button">Отследить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="delivery">
+        <div class="container">
+          <div class="delivery__header">
+            <h2 class="delivery__title">Официциальная доставка</h2>
+            <p class="delivery__subtitle">
+              Соблюдаем все нормы налогового и таможенного законодательства
+            </p>
+          </div>
+
+          <div class="delivery__grid">
+            <article class="delivery__card">
+              <div class="delivery__card-inner">
+                <img
+                  class="delivery__icon"
+                  src="../img/group-210.svg"
+                  alt="Таможенное оформление"
+                />
+                <h3 class="delivery__card-title">Таможенное<br />оформление</h3>
+              </div>
+            </article>
+
+            <article class="delivery__card">
+              <div class="delivery__card-inner">
+                <img
+                  class="delivery__icon"
+                  src="../img/group-230.svg"
+                  alt="Без рисков изъятия"
+                />
+                <h3 class="delivery__card-title">
+                  Без рисков изъятия<br />на границе
+                </h3>
+              </div>
+            </article>
+
+            <article class="delivery__card">
+              <div class="delivery__card-inner">
+                <img
+                  class="delivery__icon"
+                  src="../img/upgrading0.svg"
+                  alt="Доставка из любой точки мира"
+                />
+                <h3 class="delivery__card-title">
+                  Доставка из любой<br />точки мира
+                </h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="tariffs-section">
+        <div class="container" id="tariffs">
+          <div class="tariffs-header">
+            <h2 class="tariffs-title">Тарифы на доставку</h2>
+            <p class="tariffs-note">
+              *Срок доставки рассчитывается с момента отгрузки посылки со склада
+              Import24 в Китае до момента передачи посылки в курьерскую
+              компанию — СДЕК, Европочта, БелПочта
+            </p>
+          </div>
+
+          <div class="tariffs-cards" id="tariffs-cards-container">
+          </div>
+        </div>
+      </section>
+
+      <section class="why-choose-section" id="about">
+        <div class="container">
+          <div class="why-choose-content">
+            <div class="why-choose-text">
+              <h2 class="why-choose-title">Почему выбирают Import24?</h2>
+
+              <p class="why-choose-description">
+                Import24 — платформа доставки покупок из Китая и Европы. С 2023
+                года мы обеспечиваем полный сервис по покупке и доставке товаров
+                из китайских и европейских маркетплейсов Poizon, Taobao, Vinted,
+                Grailed, и других.
+              </p>
+
+              <p class="why-choose-description">
+                За это время количество клиентов, которым мы обеспечиваем
+                безопасный шоппинг и быструю официальную доставку, превысило 15
+                000 пользователей. Мы доставляем нашим дорогим клиентам не
+                просто покупки, а ценности и эмоции
+              </p>
+
+              <div class="company-features">
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <img src="../img/check.svg" alt="Преимущество" />
+                  </div>
+                  <div class="feature-text">
+                    <h3>Официальная таможенная очистка</h3>
+                    <p>Все посылки проходят легальное таможенное оформление, что исключает риски конфискации товаров.</p>
+                  </div>
+                </div>
+                
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <img src="../img/check.svg" alt="Преимущество" />
+                  </div>
+                  <div class="feature-text">
+                    <h3>Прозрачные тарифы</h3>
+                    <p>Никаких скрытых платежей. Вы заранее знаете точную стоимость доставки вашего заказа.</p>
+                  </div>
+                </div>
+                
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <img src="../img/check.svg" alt="Преимущество" />
+                  </div>
+                  <div class="feature-text">
+                    <h3>Помощь с выкупом товаров</h3>
+                    <p>Наши специалисты помогут выкупить товары с китайских и европейских площадок без знания языка.</p>
+                  </div>
+                </div>
+                
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <img src="../img/check.svg" alt="Преимущество" />
+                  </div>
+                  <div class="feature-text">
+                    <h3>Страхование отправлений</h3>
+                    <p>Все посылки автоматически страхуются, обеспечивая вам полную защиту от потери или повреждения.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="company-stats">
+                <div class="stat-item">
+                  <div class="stat-value">15 000+</div>
+                  <div class="stat-label">Довольных клиентов</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">50 000+</div>
+                  <div class="stat-label">Доставленных посылок</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">99.7%</div>
+                  <div class="stat-label">Успешных доставок</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">24/7</div>
+                  <div class="stat-label">Поддержка клиентов</div>
+                </div>
+              </div>
+
+              <a href="#" class="learn-more-btn">Узнать подробнее</a>
+            </div>
+
+            <div class="why-choose-image">
+              <img
+                src="../img/order-placed.svg"
+                alt="Import24 delivery person illustration"
+                class="illustration"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section" id="faq">
+        <div class="container">
+          <div class="faq-header">
+            <h2 class="faq-title">Часто задаваемые вопросы</h2>
+            <p class="faq-subtitle">Ответы на популярные вопросы о работе сервиса Import24</p>
+          </div>
+
+          <div class="faq-accordion">
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Как отследить мою посылку?</h3>
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Для отслеживания посылки введите трек-номер в формате IMP24-XXXXXX в поле отслеживания на главной странице. Трек-номер выдается после оформления заказа в личном кабинете. Вы можете в реальном времени отследить все этапы доставки вашей посылки.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Какие способы оплаты вы принимаете?</h3>
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Мы принимаем различные способы оплаты для вашего удобства:</p>
+                <ul>
+                  <li>Банковские карты (VISA, MasterCard)</li>
+                  <li>Криптовалюты (Bitcoin, Ethereum)</li>
+                  <li>Электронные платежи (ЕРИП для Беларуси)</li>
+                  <li>Банковский перевод</li>
+                </ul>
+                <p>Выберите наиболее удобный для вас способ оплаты в личном кабинете.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Сколько времени занимает доставка?</h3>
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Сроки доставки зависят от выбранного тарифа и страны отправления:</p>
+                <ul>
+                  <li>Из Китая: 12-20 дней</li>
+                  <li>Из Европы: 7-14 дней</li>
+                  <li>Экспресс-доставка: 5-10 дней</li>
+                </ul>
+                <p>Указанные сроки не включают время на выкуп товара и таможенное оформление. Точные сроки доставки вы можете узнать при оформлении заказа.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Как происходит таможенное оформление?</h3>
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Import24 берет на себя все вопросы по таможенному оформлению ваших посылок. Мы подготавливаем все необходимые документы и декларации в соответствии с законодательством Беларуси. В стоимость наших услуг уже включены расходы на таможенное оформление для большинства товаров в пределах лимитов беспошлинного ввоза.</p>
+                <p>Для товаров, превышающих лимиты беспошлинного ввоза, мы рассчитаем необходимые таможенные платежи и уведомим вас заранее.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Что делать, если посылка повреждена или утеряна?</h3>
+                <span class="faq-icon">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Все посылки, отправляемые через Import24, застрахованы. В случае повреждения или утери посылки, пожалуйста, обратитесь в нашу службу поддержки через личный кабинет или по электронной почте support@import24.by в течение 14 дней с момента получения посылки или ожидаемой даты доставки.</p>
+                <p>Наши специалисты проведут расследование и организуют компенсацию в соответствии с условиями страхования.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-branding">
+          <div class="footer-logo">
+            <img src="../img/logo.svg" alt="Import24 логотип" />
+            <div class="brand-name">
+              <span>Import</span><span class="brand-name-bold">24</span>
+            </div>
+          </div>
+          <p class="footer-tagline">
+            Самая быстрая доставка товаров<br />
+            из Китая и Европы
+          </p>
+          <p class="footer-company-info">
+            ООО "ИнтернейшиналИмпортИнвест" (УНП 590868261)<br />
+            220005, Минск, ул. Платонова, д. 49, офис 36
+          </p>
+
+          <div class="footer-legal">
+            <p class="footer-copyright">©2023-2028 Import24 Все права защищены</p>
+            <div class="footer-legal-links">
+              <a href="#" class="footer-legal-link" id="terms-link">Условия Пользования</a>
+              <a href="#" class="footer-legal-link" id="privacy-link">Политика Конфиденциальности</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-navigation">
+          <div class="footer-columns">
+            <nav class="footer-menu">
+              <h3 class="footer-menu-heading">Меню</h3>
+              <ul>
+                <li><a href="#tariffs">О Тарифах</a></li>
+                <li><a href="#about">О Нас</a></li>
+                <li><a href="#track">Отследить посылку</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="../html/сabinet.html">Личный кабинет</a></li>
+              </ul>
+            </nav>
+
+            <div class="footer-contacts">
+              <h3 class="footer-contacts-heading">Контакты</h3>
+              <ul>
+                <li><a href="tel:+375291234567">+375 (29) 123-45-67</a></li>
+                <li><a href="mailto:info@import24.by">info@import24.by</a></li>
+                <li>Пн-Пт: 9:00-18:00</li>
+                <li>Сб-Вс: выходной</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="footer-social">
+              <h3 class="footer-social-heading">Соц. Сети</h3>
+              <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="Instagram">
+                  <img src="../img/rectangle0.png" alt="Instagram" />
+                </a>
+                <a href="#" class="social-icon" aria-label="Telegram">
+                  <img src="../img/rectangle1.png" alt="Telegram" />
+                </a>
+                <a href="#" class="social-icon" aria-label="VK">
+                  <img src="../img/rectangle2.png" alt="VK" />
+                </a>
+                <a href="#" class="social-icon" aria-label="YouTube">
+                  <img src="../img/rectangle3.png" alt="YouTube" />
+                </a>
+              </div>
+            </div>
+
+            <div class="footer-action">
+              <a href="register.html" class="signup-button">Зарегистрироваться</a>
+              <div class="payment-methods">
+                <img src="../img/frame-140.png" alt="Доступные способы оплаты" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <div id="terms-modal" class="legal-modal">
+      <div class="legal-modal-content">
+        <span class="legal-modal-close">&times;</span>
+        <h2>Условия пользования</h2>
+        <div class="legal-content">
+          <h3>1. Общие положения</h3>
+          <p>1.1. Настоящие Условия пользования (далее — «Условия») определяют правила и порядок использования сервиса Import24 (далее — «Сервис»), права и обязанности пользователей Сервиса.</p>
+          <p>1.2. Используя Сервис, вы подтверждаете, что прочитали, поняли и согласны с настоящими Условиями. Если вы не согласны с каким-либо положением настоящих Условий, вам следует прекратить использование Сервиса.</p>
+          
+          <h3>2. Регистрация и учетные записи</h3>
+          <p>2.1. Для полноценного использования Сервиса вам необходимо зарегистрироваться и создать учетную запись.</p>
+          <p>2.2. Вы обязуетесь предоставить точную, актуальную и полную информацию при регистрации, а также поддерживать и своевременно обновлять данные вашей учетной записи.</p>
+          <p>2.3. Вы несете ответственность за сохранение конфиденциальности данных вашей учетной записи, включая пароль, и за все действия, совершаемые под вашей учетной записью.</p>
+          
+          <h3>3. Услуги доставки</h3>
+          <p>3.1. Сервис предоставляет услуги по организации доставки товаров из зарубежных интернет-магазинов и торговых площадок.</p>
+          <p>3.2. Сроки доставки, указанные на Сервисе, являются приблизительными и могут изменяться в зависимости от различных факторов, включая, но не ограничиваясь, таможенное оформление, погодные условия, загруженность логистических компаний.</p>
+          <p>3.3. Мы не несем ответственности за задержки, вызванные действиями третьих лиц, включая таможенные органы, транспортные компании, поставщиков товаров.</p>
+          
+          <h3>4. Оплата</h3>
+          <p>4.1. Оплата услуг осуществляется в соответствии с действующими тарифами, указанными на Сервисе.</p>
+          <p>4.2. Все платежи осуществляются в белорусских рублях.</p>
+          <p>4.3. Сервис оставляет за собой право изменять тарифы на услуги, предварительно уведомив пользователей путем размещения соответствующей информации на Сервисе.</p>
+          
+          <h3>5. Ограничение ответственности</h3>
+          <p>5.1. Сервис предоставляется «как есть» без каких-либо гарантий, явных или подразумеваемых.</p>
+          <p>5.2. Мы не несем ответственности за любые убытки, которые могут возникнуть в результате использования или невозможности использования Сервиса.</p>
+          <p>5.3. Максимальная ответственность Сервиса перед пользователем ограничивается суммой, уплаченной пользователем за соответствующую услугу.</p>
+          
+          <h3>6. Изменение условий</h3>
+          <p>6.1. Мы оставляем за собой право по своему усмотрению изменять настоящие Условия в любое время.</p>
+          <p>6.2. Обновленные Условия вступают в силу с момента их публикации на Сервисе, если иное не указано в новой редакции Условий.</p>
+          <p>6.3. Продолжая использовать Сервис после внесения изменений в Условия, вы подтверждаете свое согласие с обновленными Условиями.</p>
+          
+          <h3>7. Контакты</h3>
+          <p>7.1. По всем вопросам, связанным с использованием Сервиса, вы можете обратиться к нам по адресу: info@import24.by</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="privacy-modal" class="legal-modal">
+      <div class="legal-modal-content">
+        <span class="legal-modal-close">&times;</span>
+        <h2>Политика конфиденциальности</h2>
+        <div class="legal-content">
+          <h3>1. Введение</h3>
+          <p>1.1. Настоящая Политика конфиденциальности (далее — «Политика») описывает, как Import24 (далее — «Мы», «Компания» или «Сервис») собирает, использует и защищает персональные данные пользователей (далее — «Вы» или «Пользователь») сервиса Import24.</p>
+          <p>1.2. Используя наш Сервис, Вы соглашаетесь с условиями настоящей Политики конфиденциальности.</p>
+
+          <h3>2. Какую информацию мы собираем</h3>
+          <p>2.1. <strong>Персональные данные</strong> — информация, которая прямо или косвенно относится к определенному или определяемому физическому лицу.</p>
+          <p>2.2. При регистрации и использовании Сервиса мы можем собирать следующие персональные данные:</p>
+          <ul>
+            <li>Контактная информация (имя, фамилия, адрес электронной почты, номер телефона, почтовый адрес)</li>
+            <li>Информация об учетной записи (логин, пароль, история заказов)</li>
+            <li>Платежная информация (номер банковской карты, данные электронного кошелька)</li>
+            <li>Информация о доставке (адрес доставки, предпочтения по получению)</li>
+          </ul>
+          <p>2.3. <strong>Технические данные</strong> — мы также автоматически собираем информацию о вашем устройстве и взаимодействии с нашим Сервисом:</p>
+          <ul>
+            <li>IP-адрес</li>
+            <li>Информация о браузере и операционной системе</li>
+            <li>Данные о посещенных страницах</li>
+            <li>Время доступа и продолжительность посещения</li>
+            <li>Файлы cookie и аналогичные технологии</li>
+          </ul>
+
+          <h3>3. Как мы используем вашу информацию</h3>
+          <p>3.1. Мы используем собранную информацию для следующих целей:</p>
+          <ul>
+            <li>Предоставление и поддержка услуг Сервиса</li>
+            <li>Обработка и выполнение заказов</li>
+            <li>Коммуникация с Пользователями</li>
+            <li>Улучшение и оптимизация Сервиса</li>
+            <li>Анализ использования Сервиса и статистика</li>
+            <li>Обеспечение безопасности</li>
+            <li>Соблюдение юридических обязательств</li>
+          </ul>
+
+          <h3>4. Передача данных третьим лицам</h3>
+          <p>4.1. Мы не продаем, не обмениваем и не передаем ваши персональные данные третьим лицам без вашего согласия, за исключением случаев, описанных в данной Политике.</p>
+          <p>4.2. Мы можем передавать ваши данные следующим категориям получателей:</p>
+          <ul>
+            <li>Поставщики услуг (транспортные компании, платежные системы)</li>
+            <li>Деловые партнеры, помогающие нам предоставлять и улучшать Сервис</li>
+            <li>Государственные органы, если того требует закон</li>
+          </ul>
+
+          <h3>5. Защита данных</h3>
+          <p>5.1. Мы принимаем технические, организационные и физические меры для защиты ваших персональных данных от несанкционированного доступа, использования или раскрытия.</p>
+          <p>5.2. Несмотря на принимаемые меры, мы не можем гарантировать абсолютную безопасность данных при их передаче через Интернет.</p>
+
+          <h3>6. Права пользователей</h3>
+          <p>6.1. В соответствии с законодательством о защите данных, вы имеете следующие права:</p>
+          <ul>
+            <li>Право на доступ к своим персональным данным</li>
+            <li>Право на исправление неточных данных</li>
+            <li>Право на удаление своих данных (при определенных условиях)</li>
+            <li>Право на ограничение обработки данных</li>
+            <li>Право на возражение против обработки данных</li>
+            <li>Право на перенос данных</li>
+          </ul>
+          <p>6.2. Для реализации этих прав, пожалуйста, свяжитесь с нами по контактам, указанным в разделе 9.</p>
+
+          <h3>7. Изменения в Политике конфиденциальности</h3>
+          <p>7.1. Мы можем обновлять настоящую Политику конфиденциальности периодически.</p>
+          <p>7.2. Мы уведомим вас о любых существенных изменениях, разместив новую версию Политики на нашем сайте.</p>
+          <p>7.3. Продолжая использовать наш Сервис после таких изменений, вы подтверждаете свое согласие с обновленной Политикой.</p>
+
+          <h3>8. Файлы cookie</h3>
+          <p>8.1. Наш Сервис использует файлы cookie и аналогичные технологии для улучшения взаимодействия с пользователем.</p>
+          <p>8.2. Вы можете настроить свой браузер для отказа от всех или некоторых файлов cookie, или для предупреждения, когда файлы cookie отправляются.</p>
+
+          <h3>9. Контактная информация</h3>
+          <p>9.1. Если у вас возникли вопросы или опасения относительно настоящей Политики конфиденциальности или обработки ваших данных, пожалуйста, свяжитесь с нами по электронной почте: privacy@import24.by</p>
+        </div>
+      </div>
+    </div>
+    
+    <script src="../js/xml-loader.js"></script>
+    <script src="../js/tariff-renderer.js"></script>
+    <script src="../js/tracking-service.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
